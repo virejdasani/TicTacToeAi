@@ -44,9 +44,41 @@ function play(squareNum, symbol) {
     // Change the id so user can't click the button to change symbol again. Pressing it again will have no visible output except this console error: Uncaught TypeError: Cannot set property 'innerText' of null
     document.getElementById(squareNum).id = 'disabled'
 
+    // Winning Combos
     if (s1.innerHTML === "X" && s2.innerHTML === "X" && s3.innerHTML === "X") {
         document.getElementById('win').innerHTML = "PLAYER 1 WINS"
-    }    
+    } else if (s4.innerHTML === "X" && s5.innerHTML === "X" && s6.innerHTML === "X") {
+        document.getElementById('win').innerHTML = "PLAYER 1 WINS"
+    } else if (s7.innerHTML === "X" && s8.innerHTML === "X" && s9.innerHTML === "X") {
+        document.getElementById('win').innerHTML = "PLAYER 1 WINS"
+    } else if (s1.innerHTML === "X" && s4.innerHTML === "X" && s7.innerHTML === "X") {
+        document.getElementById('win').innerHTML = "PLAYER 1 WINS"
+    } else if (s2.innerHTML === "X" && s5.innerHTML === "X" && s8.innerHTML === "X") {
+        document.getElementById('win').innerHTML = "PLAYER 1 WINS"
+    } else if (s3.innerHTML === "X" && s6.innerHTML === "X" && s7.innerHTML === "X") {
+        document.getElementById('win').innerHTML = "PLAYER 1 WINS"
+    } else if (s1.innerHTML === "X" && s5.innerHTML === "X" && s9.innerHTML === "X") {
+        document.getElementById('win').innerHTML = "PLAYER 1 WINS"
+    } else if (s3.innerHTML === "X" && s5.innerHTML === "X" && s7.innerHTML === "X") {
+        document.getElementById('win').innerHTML = "PLAYER 1 WINS"
+    }
+    else if (s1.innerHTML === "O" && s2.innerHTML === "O" && s3.innerHTML === "O") {
+        document.getElementById('win').innerHTML = "PLAYER 2 WINS"
+    } else if (s4.innerHTML === "O" && s5.innerHTML === "O" && s6.innerHTML === "O") {
+        document.getElementById('win').innerHTML = "PLAYER 2 WINS"
+    } else if (s7.innerHTML === "O" && s8.innerHTML === "O" && s9.innerHTML === "O") {
+        document.getElementById('win').innerHTML = "PLAYER 2 WINS"
+    } else if (s1.innerHTML === "O" && s4.innerHTML === "O" && s7.innerHTML === "O") {
+        document.getElementById('win').innerHTML = "PLAYER 2 WINS"
+    } else if (s2.innerHTML === "O" && s5.innerHTML === "O" && s8.innerHTML === "O") {
+        document.getElementById('win').innerHTML = "PLAYER 2 WINS"
+    } else if (s3.innerHTML === "O" && s6.innerHTML === "O" && s7.innerHTML === "O") {
+        document.getElementById('win').innerHTML = "PLAYER 2 WINS"
+    } else if (s1.innerHTML === "O" && s5.innerHTML === "O" && s9.innerHTML === "O") {
+        document.getElementById('win').innerHTML = "PLAYER 2 WINS"
+    } else if (s3.innerHTML === "O" && s5.innerHTML === "O" && s7.innerHTML === "O") {
+        document.getElementById('win').innerHTML = "PLAYER 2 WINS"
+    }
 }
 
 
