@@ -1,3 +1,8 @@
+body {
+    background-color: black;
+    color: azure;
+}
+
 .center {
     margin-left: 38%;
     margin-top: 8%;
@@ -11,4 +16,9 @@
 
 #disabled {
     cursor: not-allowed;
+}
+
+#turn {
+    margin-top: 50px;
+    text-align: center;
 }
