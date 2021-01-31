@@ -13,7 +13,7 @@ let displayTurn = document.getElementById('turn')
 
 // This just determines whose turn it is. If turn is divisible by 2, it is p1 and vice versa
 var turn = 2
-displayTurn.innerHTML = "Player 1"
+displayTurn.innerHTML = "Player 1 (X)"
 
 // This function decides which symbol to place on button click
 function getSymbol(symbol) {
@@ -43,4 +43,11 @@ function play(squareNum, symbol) {
     document.getElementById(squareNum).innerText = symbol
     // Change the id so user can't click the button to change symbol again. Pressing it again will have no visible output except this console error: Uncaught TypeError: Cannot set property 'innerText' of null
     document.getElementById(squareNum).id = 'disabled'
+
+    if (s1.innerHTML === "X" && s2.innerHTML === "X" && s3.innerHTML === "X") {
+        document.getElementById('win').innerHTML = "PLAYER 1 WINS"
+    }    
 }
+
+
+
