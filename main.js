@@ -49,10 +49,10 @@ function getSymbol(symbol) {
     // Check whose turn it is and change player
     if (turn % 2 === 0) {
         symbol = "O"
-        displayTurn.innerHTML = "Player 1' turn"
+        displayTurn.innerHTML = "Player 1 (X)"
     } else {
         symbol = "X"
-        displayTurn.innerHTML = "Player 2's turn"
+        displayTurn.innerHTML = "Player 2 (X)"
     }
     return symbol
 }
