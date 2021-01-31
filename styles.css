@@ -28,3 +28,13 @@ body {
     text-align: center;
     color: aqua;
 }
+
+#options {
+    width: 20%;
+    height: 50px;
+    margin-left: 40%;
+}
+
+#optionsDiv {
+    margin-top: 250px;
+}
