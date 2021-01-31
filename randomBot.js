@@ -10,7 +10,7 @@ let s9 = document.getElementById('s9')
 
 let displayTurn = document.getElementById('turn')
 
-var pickRandom = ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9']
+var avalaibleSquares = ['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8', 's9']
 
 // This just determines whose turn it is. If turn is divisible by 2, it is p1 and vice versa
 var turn = 2
@@ -36,9 +36,10 @@ function getSymbol(symbol) {
 function btnClick(squareNum) {
     console.log(squareNum, " clicked")
 
-    // This will remove the clicked button id from the array: pickRandom so it cant be clicked by the bot
-    pickRandom.splice(pickRandom.indexOf(squareNum), 1)
-    
+    // This will remove the clicked button id from the array: avalaibleSquares so it cant be clicked by the bot
+    avalaibleSquares.splice(avalaibleSquares.indexOf(squareNum), 1)
+
+    // Call play function
     play(squareNum, getSymbol())
 }
 
@@ -84,11 +85,10 @@ function play(squareNum, symbol) {
     }
 
     if (turn % 2 != 0) {
-        // Bot's turn to randomly pick a button to pick
-        let randomSquare = Math.floor(Math.random() * pickRandom.length)
-        console.log("Bot chooses ", pickRandom[randomSquare + 1])
-        // document.getElementById(pickRandom[randomSquare]).click()
-        btnClick(pickRandom[randomSquare])
+        // Bot's turn to randomly pick a button to pick from the avalaibleSquares array
+        let randomSquare = Math.floor(Math.random() * avalaibleSquares.length)
+        console.log("Bot chooses ", avalaibleSquares[randomSquare + 1])
+        btnClick(avalaibleSquares[randomSquare])
     } else {
         console.log("Not bots turn")
     }
