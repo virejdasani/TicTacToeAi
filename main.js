@@ -66,4 +66,6 @@ function btnClick(squareNum) {
 // This function places symbol in the clicked square
 function play(squareNum, symbol) {
     document.getElementById(squareNum).innerText = symbol
+    // Change the id so user can't click the button to change symbol again. Pressing it again will have no visible output except this console error: Uncaught TypeError: Cannot set property 'innerText' of null
+    document.getElementById(squareNum).id = 'newID'
 }
