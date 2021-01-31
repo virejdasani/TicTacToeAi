@@ -1,11 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dumb Bot - Tic Tac Toe </title>
 </head>
+
 <body>
-    
+    <div id="board" class="center">
+        <!-- s1 = square 1 etc. -->
+        <div class="row">
+            <button id="s1" onclick="btnClick('s1')" type="button" class="btn btn-dark"></button>
+            <button id="s2" onclick="btnClick('s2')" type="button" class="btn btn-dark"></button>
+            <button id="s3" onclick="btnClick('s3')" type="button" class="btn btn-dark"></button>
+        </div>
+
+        <div class="row">
+            <button id="s4" onclick="btnClick('s4')" type="button" class="btn btn-dark"></button>
+            <button id="s5" onclick="btnClick('s5')" type="button" class="btn btn-dark"></button>
+            <button id="s6" onclick="btnClick('s6')" type="button" class="btn btn-dark"></button>
+        </div>
+
+        <div class="row">
+            <button id="s7" onclick="btnClick('s7')" type="button" class="btn btn-dark"></button>
+            <button id="s8" onclick="btnClick('s8')" type="button" class="btn btn-dark"></button>
+            <button id="s9" onclick="btnClick('s9')" type="button" class="btn btn-dark"></button>
+        </div>
+    </div>
+
+    <h3 id="turn"></h3>
+    <h3 id="win"></h3>
+
+    <script src="randomBot.js"></script>
 </body>
+
 </html>
